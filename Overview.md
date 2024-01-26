@@ -20,8 +20,6 @@
      * This project allows us to use our coding and collaborating skills.
      * If this project succeeds, it allow people to be able to do their budgeting independently or with family members.
      
-     
-`2-5 sentence description of project outcome. Think about "intellectual merit" (why is this cool for learning) and "broader impact" (why is it good if we succeed).` 
 
 ## Components
 * Component1
