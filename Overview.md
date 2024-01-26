@@ -25,4 +25,4 @@
 
 ## Components
 * Component1
-  * Lead: name1
+  * Lead: HanaTollossa
