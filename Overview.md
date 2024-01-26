@@ -24,3 +24,4 @@
 ## Components
 * Component1
   * Lead: HanaTollossa
+  * Software Developers: Alex Hooper, Varshitha Thanam, JahCorian Ivery, Ethan Timpe
