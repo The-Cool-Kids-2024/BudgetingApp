@@ -1,6 +1,3 @@
-import sys
-import datetime
-
 extensions = ['sphinx_simplepdf', 
               'breathe', 
               'myst_parser', 
@@ -11,14 +8,14 @@ source_suffix = ['.rst', '.md']
 
 root_doc = 'index'
 
-project = 'Budgeting App'
+project = 'CommonCents'
 copyright = '2024'
 author = 'Alexander Hooper, Ethan Timpe, Hana Tollossa, Jahcorian Ivery, Varshitha Thanam'
 show_authors = True
 version = '0.0.1'
 
-breathe_projects = {"Budgeting App": "./xml"}
-breathe_default_project = "Budgeting App"
+breathe_projects = {"CommonCents": "./xml"}
+breathe_default_project = "CommonCents"
 
 # HTML theming
 html_theme = 'sphinx_rtd_theme'

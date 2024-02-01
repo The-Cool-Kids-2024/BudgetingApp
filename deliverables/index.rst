@@ -1,5 +1,5 @@
 ###########################################
-Welcome to the Budgeting App Documentation!
+Welcome to the CommonCents Documentation!
 ###########################################
 
 .. toctree::

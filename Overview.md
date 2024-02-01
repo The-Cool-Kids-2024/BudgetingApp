@@ -1,4 +1,4 @@
-# The Cool Kids Budgeting App
+# CommonCents
 ## Project Proposal Overview
 
 ## Details
@@ -19,7 +19,6 @@
      * We will be incorporating AI tools to help suggest how the user is doing with their budget and trucking good practice.
      * This project allows us to use our coding and collaborating skills.
      * If this project succeeds, it allow people to be able to do their budgeting independently or with family members.
-     
 
 ## Components
 * App UI
