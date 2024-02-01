@@ -12,7 +12,7 @@
      * Name: Varshitha Thanam
 
 * Synopsis :
-     * We are creating a web-based budgeting application.
+     * We are creating a mobile budgeting application.
      * We will be using a combination of the Waterfall and Agile system development process. 
      * For the coding part of the project, we will be using the Dart programming language with the Flutter SDK. 
      * When we do testing for security reasons we will be using user input. 
