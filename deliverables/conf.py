@@ -25,6 +25,7 @@ html_favicon = '_static/favicon.png'
 html_theme_options = {
     'titles_only': False,
     'navigation_depth': 2,
+    'logo_only': True,
     'display_version': False
 }
 
