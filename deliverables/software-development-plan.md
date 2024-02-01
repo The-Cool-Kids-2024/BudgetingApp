@@ -1,10 +1,11 @@
 # Software Development Plan
 
 ## Administrivia
-* Meeting details: cadence, method, minutes, etc.
+* Meeting details: Bi-weekly, in person or Discord, meeting notes are added to Github.
 
 ## Development Methodology
-* Waterfall, Agile, something in between?
+* Agile structured Sprints, waterfall structured inter-sprint development.
 
 ## Milestones
-* Important Milestones that some combine the development methodology with constraints you cannot change (e.g., how long the course is).
+* February 15: Sketches of each page
+* February 29: Coded homepage wireframe.
