@@ -1,0 +1,4 @@
+- The app shall be available for download on IOS and Android.
+- The app shall provide a budget overview.
+- The app shall provide a budget projection.
+
