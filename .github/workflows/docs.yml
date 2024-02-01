@@ -23,6 +23,7 @@ jobs:
         run: |
           cd deliverables
           sphinx-build -M html . _html
+          ls -la
 
       - name: Export HTML
         uses: actions/upload-artifact@v3
@@ -39,7 +40,7 @@ jobs:
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/_html/html
+          publish_dir: deliverables/_html/html
           force_orphan: true
 
         
