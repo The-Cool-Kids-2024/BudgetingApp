@@ -30,7 +30,7 @@ jobs:
         if: ${{ github.ref != 'refs/heads/main' }}
         with:
           name: html-build
-          path: docs/_html/html/*
+          path: deliverables/_html/html/*
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
