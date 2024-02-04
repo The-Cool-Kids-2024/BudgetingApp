@@ -1,7 +1,7 @@
 # Software Development Plan
 
 ## Administrivia
-* Meeting details: Bi-weekly, in person or Discord, meeting notes are added to Github.
+* Meeting details: twice a week, in person or via Discord, meeting notes are added to GitHub.
 
 ## Development Methodology
 * Agile structured Sprints, waterfall structured inter-sprint development.
