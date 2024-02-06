@@ -21,3 +21,6 @@ Remove this line. Each Member should directly add their name as a _separate comm
 * Group Member
 * Group Member
 * Group Member
+
+## Signatures
+- ...

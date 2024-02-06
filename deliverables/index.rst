@@ -13,3 +13,4 @@ Welcome to the CommonCents Documentation!
     :maxdepth: 2
 
     meeting-minutes/01-30-24
+    meeting-minutes/02-01-24
