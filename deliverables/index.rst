@@ -15,3 +15,4 @@ Welcome to the CommonCents Documentation!
     meeting-minutes/01-30-24
     meeting-minutes/02-01-24
     meeting-minutes/02-06-24
+    meeting-minutes/02-08-24
