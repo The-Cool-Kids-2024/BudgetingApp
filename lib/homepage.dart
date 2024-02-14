@@ -13,11 +13,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('CommonCents'),
+        title: Image.asset('deliverables/_static/logo-green.png', fit: BoxFit.fitHeight),
         centerTitle: true,
-        foregroundColor: Color.fromARGB(255, 34, 203, 67),
       ),
-      bottomNavigationBar: GNav(
+      bottomNavigationBar: const GNav(
         activeColor: Color.fromARGB(255, 34, 203, 67),
         color: Color.fromARGB(255, 34, 203, 67),
         tabs: [
