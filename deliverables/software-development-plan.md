@@ -8,10 +8,8 @@
 
 ## Milestones
 * February 13: Requirements Specification document 
-* February 15: Sketches of each page
-* February 22: Design Specification Document. 
-* February 29: Coded homepage wireframe.
+* February 22: Sketches of each page
+* February 29: Design Specification Document. 
 * March 4:Individual page codes
-* March 14: Testing
 * March 26: Final product.
   
