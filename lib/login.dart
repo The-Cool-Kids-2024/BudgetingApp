@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FirstRoute extends StatelessWidget {
-  const FirstRoute({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class FirstRoute extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-          child: Column(
+        child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -33,7 +33,7 @@ class FirstRoute extends StatelessWidget {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Color.fromARGB(255, 34, 203, 67),
+                backgroundColor: Color.fromARGB(255, 34, 203, 67),
               foregroundColor: Colors.white,
             ),
             onPressed: () {
