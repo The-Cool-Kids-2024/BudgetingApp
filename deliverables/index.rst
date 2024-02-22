@@ -3,10 +3,11 @@ Welcome to the CommonCents Documentation!
 ###########################################
 
 .. toctree::
-    :caption: Documentation
+    :caption: Design
 
     requirements
     software-development-plan
+    design
 
 .. toctree::
     :caption: Meeting Minutes
