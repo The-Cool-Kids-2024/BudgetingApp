@@ -9,7 +9,8 @@
 ## Milestones
 * February 13: Requirements Specification document 
 * February 22: Sketches of each page
-* February 29: Design Specification Document. 
-* March 4:Individual page codes
+* February 29: Design Specification Document.
+* March 8: Requirements updated with evaluation methods.
+* March 15: Coded UI for each page.
 * March 26: Final product.
   
