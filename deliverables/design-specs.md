@@ -1,22 +1,12 @@
 # Design Specifications
 ```mermaid
-flowchart LR;
-    A[Login Page] -- Account does not exist --> B[Create Account]
-    A -- Account already exists --> C[Home Page]
+flowchart TD;
+    A[Login Page] --"Create Account" button --> B[Create Account]
+    A -- "Login" button w/ valid credentials --> C[Home Page]
+    A -- "Login" button w/ invalid credentials -- A
     B --> C
-    C --> D[Budget]
-    C --> E[Add Income/Expense]
-    C --> F[View Profile]
+    C -- "Budget" button --> D[Budget]
+    C -- "Add" button --> E[Add Income/Expense]
+    C -- "Profile" button --> F[View Profile]
+    F -- "Log out" button --> A
 ```
-
-## Login Page
-
-## Create Account
-
-## Home Page
-
-## Budget
-
-## Add Income/Expenses
-
-## View Profile
