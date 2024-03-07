@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
-import 'login.dart';
+import 'package:test_flutter/MainNavigationWidget.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: HomePage(),
-      home: Login()
+      home: MainNavigationWidget()
     );
   }
 }

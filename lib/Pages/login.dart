@@ -33,7 +33,7 @@ class Login extends StatelessWidget {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 34, 203, 67),
+                backgroundColor: const Color.fromARGB(255, 34, 203, 67),
               foregroundColor: Colors.white,
             ),
             onPressed: () {
@@ -43,7 +43,7 @@ class Login extends StatelessWidget {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Color.fromARGB(255, 34, 203, 67),
+              backgroundColor: const Color.fromARGB(255, 34, 203, 67),
               foregroundColor: Colors.white,
             ),
             onPressed: () {

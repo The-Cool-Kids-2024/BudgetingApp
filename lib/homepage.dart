@@ -17,48 +17,7 @@ class _HomePageState extends State<HomePage> {
             fit: BoxFit.fitHeight),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const TextField(
-              enabled: false,
-              decoration: InputDecoration(
-                labelText: "Ethan",
-              ),
-            ),
-            const TextField(
-              enabled: false,
-              decoration: InputDecoration(
-                labelText: "Timpe",
-              ),
-            ),
-            const TextField(
-              enabled: false,
-              decoration: InputDecoration(
-                labelText: "ethantimpe",
-              ),
-            ),
-            const TextField(
-              enabled: false,
-              decoration: InputDecoration(
-                labelText: "timpe.4@wright.edu",
-              ),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 34, 203, 67),
-                foregroundColor: Colors.white,
-              ),
-              onPressed: () {
-                print('Press');
-              },
-              child: const Text('Edit'),
-            ),
-          ],
-        )
-      ),
+      body: const Center(child: Text("Home Page")),
       bottomNavigationBar: const GNav(
           activeColor: Color.fromARGB(255, 34, 203, 67),
           color: Color.fromARGB(255, 34, 203, 67),
