@@ -10,3 +10,4 @@ flowchart TD;
     C -- "Profile" button --> F[View Profile]
     F -- "Log out" button --> A
 ```
+
