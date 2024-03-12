@@ -12,7 +12,7 @@ class Login extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
+          child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -33,7 +33,7 @@ class Login extends StatelessWidget {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 34, 203, 67),
+              backgroundColor: const Color.fromARGB(255, 34, 203, 67),
               foregroundColor: Colors.white,
             ),
             onPressed: () {

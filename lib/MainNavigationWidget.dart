@@ -29,9 +29,15 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Image.asset('deliverables/_static/logo-green.png',
+            fit: BoxFit.fitHeight),
+        centerTitle: true,
+      ),
       body: currentPage,
       extendBody: true,
       bottomNavigationBar: BottomAppBar(
+        color: const Color.fromARGB(255, 245, 245, 245),
         notchMargin: 5,
         shape: const CircularNotchedRectangle(),
 
@@ -40,24 +46,28 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
           children: [
             IconButton(
               icon: const Icon(Icons.home),
+              color: const Color.fromARGB(255, 34, 203, 67),
               onPressed: () {
                 SetCurrentPage(NavigationPage.HOME);
               },
             ),
             IconButton(
               icon: const Icon(Icons.attach_money),
+              color: const Color.fromARGB(255, 34, 203, 67),
               onPressed: () {
                 SetCurrentPage(NavigationPage.BUDGET);
               },
             ),
             IconButton(
               icon: const Icon(Icons.wallet),
+              color: const Color.fromARGB(255, 34, 203, 67),
               onPressed: () {
                 SetCurrentPage(NavigationPage.GOAL);
               },
             ),
             IconButton(
               icon: const Icon(Icons.account_circle),
+              color: const Color.fromARGB(255, 34, 203, 67),
               onPressed: () {
                 SetCurrentPage(NavigationPage.ACCOUNT);
               },
@@ -68,6 +78,8 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
 
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromARGB(255, 34, 203, 67),
+        foregroundColor: Colors.white,
         onPressed: () {
           print("Floating Action Button Pressed");
         },
@@ -84,13 +96,13 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
         case NavigationPage.HOME:
           currentPage = const HomePage();
           break;
-case NavigationPage.BUDGET:
+        case NavigationPage.BUDGET:
           currentPage = const BudgetPage();
           break;
-case NavigationPage.GOAL:
+        case NavigationPage.GOAL:
           currentPage = const GoalsPage();
           break;
-case NavigationPage.ACCOUNT:
+        case NavigationPage.ACCOUNT:
           currentPage = const AccountPage();
           break;
       }
