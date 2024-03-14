@@ -8,6 +8,7 @@ Welcome to the CommonCents Documentation!
     requirements
     software-development-plan
     design
+    Software-development design templet
 
 .. toctree::
     :caption: Meeting Minutes
@@ -20,3 +21,6 @@ Welcome to the CommonCents Documentation!
     meeting-minutes/02-13-24
     meeting-minutes/02-15-24
     meeting-minutes/02-20-24
+    meeting-minutes/03-05-24
+    meeting-minutes/03-07-24
+    meeting-minutes/03-12-24
