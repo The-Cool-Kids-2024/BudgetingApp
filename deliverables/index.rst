@@ -7,8 +7,8 @@ Welcome to the CommonCents Documentation!
 
     requirements
     software-development-plan
+    design-specs
     design
-    Software-development design templet
 
 .. toctree::
     :caption: Meeting Minutes
