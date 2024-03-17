@@ -31,6 +31,7 @@ flowchart TD;
     C -- "Budget" button --> D[Budget]
     C -- "Add" button --> E[Add Income/Expense]
     C -- "Profile" button --> F[View Profile]
+    C -- "Goal" button --> G[Goal] -->C
     F -- "Log out" button --> A
 ```
 
