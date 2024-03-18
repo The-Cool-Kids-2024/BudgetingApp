@@ -76,6 +76,10 @@ Explain how the information domain of your system is transformed into data struc
 ### Income/Expense Page
 ### Budget Page
 ### Goals Page
+- "Goal Amount" number field
+- "Goal date" date field
+- "Goal monthly" number field (appears based on "Switch to monthly goal")
+- "Switch to monthly goal" button
 ### Account Page
 
 The account page displays the user's first name, last name, username, and email. From this page, users can choose to change these fields or log out.
