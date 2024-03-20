@@ -87,6 +87,12 @@ Explain how the information domain of your system is transformed into data struc
   
 ### Income/Expense Page
 ### Budget Page
+- "Budget" Icon
+- "Budget Indicator" Icon
+- "Mothly Statement" button
+- "Yearly Statement" button
+- Monthly Statement button opens up to the expense page on that month
+- Yearly Statement button opens up to the expense page on that year
 ### Goals Page
 - "Goal Amount" number field
 - "Goal date" date field
