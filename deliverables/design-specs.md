@@ -44,6 +44,8 @@ The Home Page is the page the user sees upon logging in. It allows users to see 
 
 ### Income/Expense Page
 ### Budget Page
+This page will allow the user to view their buget statments either mothly or yearly.
+
 ### Goals Page
 ### Account Page
 
