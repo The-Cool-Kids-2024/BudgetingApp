@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:test_flutter/CCTheme.dart';
 import 'package:test_flutter/Pages/GoalsPage.dart';
 
 import 'Pages/AccountPage.dart';
@@ -40,24 +42,28 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
           children: [
             IconButton(
               icon: const Icon(Icons.home),
+              color: CCTheme.text,
               onPressed: () {
                 SetCurrentPage(NavigationPage.HOME);
               },
             ),
             IconButton(
               icon: const Icon(Icons.attach_money),
+              color: CCTheme.text,
               onPressed: () {
                 SetCurrentPage(NavigationPage.BUDGET);
               },
             ),
             IconButton(
               icon: const Icon(Icons.wallet),
+              color: CCTheme.text,
               onPressed: () {
                 SetCurrentPage(NavigationPage.GOAL);
               },
             ),
             IconButton(
               icon: const Icon(Icons.account_circle),
+              color: CCTheme.text,
               onPressed: () {
                 SetCurrentPage(NavigationPage.ACCOUNT);
               },
@@ -67,12 +73,28 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
       ),
 
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("Floating Action Button Pressed");
-        },
+      floatingActionButton: SpeedDial(
+        backgroundColor: CCTheme.accent,
+        foregroundColor: CCTheme.text,
         shape: const CircleBorder(),
         child: const Icon(Icons.add),
+        direction: SpeedDialDirection.up,
+        children: [
+          SpeedDialChild(
+            child: const Icon(Icons.attach_money),
+            label: 'Add Transaction',
+            onTap: () {
+              print('Add Transaction');
+            },
+          ),
+          SpeedDialChild(
+            child: const Icon(Icons.wallet),
+            label: 'Add Goal',
+            onTap: () {
+              print('Add Goal');
+            },
+          ),
+        ],
 
       )
     );
