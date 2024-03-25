@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class BudgetPage extends StatefulWidget {
@@ -8,8 +9,16 @@ class BudgetPage extends StatefulWidget {
 }
 
 class _BudgetPageState extends State<BudgetPage> {
+
   @override
   Widget build(BuildContext context) {
-    return const Center( child: Text("Budget Page"));
+    return Scaffold(
+      body: ListView(
+        children: [
+          
+        ],
+      ),
+    );
+    // return const Center( child: Text("Budget Page"));
   }
 }
