@@ -43,6 +43,8 @@ The Login Page is the first page displayed to the user upon opening the app. It 
 The Home Page is the page the user sees upon logging in. It allows users to see their summaries and navigate to the other pages.
 
 ### Income/Expense Page
+The Income and Expenses page will show a user an overview of all records transactions for the account.
+
 ### Budget Page
 This page will allow the user to view their buget statments either mothly or yearly.
 
