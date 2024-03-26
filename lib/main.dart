@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:test_flutter/MainNavigationWidget.dart';
+import 'package:test_flutter/Pages/login.dart';
+import 'package:postgres/postgres.dart';
+import 'Database.dart';
 
-
-void main() {
+void main() async {
+  Database.init();
   runApp(const MyApp());
 }
 
@@ -12,9 +15,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      //home: HomePage(),
-      home: MainNavigationWidget()
-    );
+        debugShowCheckedModeBanner: false, home: MainNavigationWidget());
   }
 }

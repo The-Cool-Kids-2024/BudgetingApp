@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import '../CCTheme.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({super.key});
@@ -45,7 +46,7 @@ class _AccountPageState extends State<AccountPage> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 34, 203, 67),
+                  backgroundColor: CCTheme.primary,
                   foregroundColor: Colors.white,
                 ),
                 onPressed: () {

@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  postgres: ^3.1.2
+  crypto: ^3.0.3
 
 
   # The following adds the Cupertino Icons font to your application.
