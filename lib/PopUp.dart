@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ErrorPopUp{
+class PopUp{
 
-  static showAlertDialog(BuildContext context, String message) {
+  static showAlertDialog(BuildContext context, String header, String message) {
     Widget continueButton = TextButton(
       child: const Text("OK"),
       onPressed: () {
@@ -12,7 +12,7 @@ class ErrorPopUp{
 
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
-      title: const Text("Error"),
+      title: Text(header),
       content: Text(message),
       actions: [
         continueButton,

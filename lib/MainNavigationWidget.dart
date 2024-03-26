@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:test_flutter/Error.dart';
+import 'package:test_flutter/PopUp.dart';
 import 'package:test_flutter/Pages/GoalsPage.dart';
 import 'package:test_flutter/Pages/Login.dart';
 
 import 'Pages/AccountPage.dart';
 import 'Pages/BudgetPage.dart';
 import 'Pages/HomePage.dart';
+import 'Pages/CreateAccountPage.dart';
 import 'CCTheme.dart';
 import 'User.dart';
 
@@ -51,34 +52,48 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
                 icon: const Icon(Icons.home),
                 color: CCTheme.primary,
                 onPressed: () {
-                  if (User.userId != 0) SetCurrentPage(NavigationPage.HOME);
-                  else ErrorPopUp.showAlertDialog(context, "You must log in before accessing your budget data");
+                  if (User.id != 0){
+                    SetCurrentPage(NavigationPage.HOME);
+                  }
+                  else {
+                    PopUp.showAlertDialog(context, "Error", "You must log in before accessing your budget data");
+                  }
                 },
               ),
               IconButton(
                 icon: const Icon(Icons.attach_money),
                 color: CCTheme.primary,
                 onPressed: () {
-                  if (User.userId != 0) SetCurrentPage(NavigationPage.BUDGET);
-                  else ErrorPopUp.showAlertDialog(context, "You must log in before accessing your budget data");
+                  if (User.id != 0){
+                    SetCurrentPage(NavigationPage.BUDGET);
+                  }
+                  else {
+                    PopUp.showAlertDialog(context, "Error", "You must log in before accessing your budget data");
+                  }
                 },
               ),
               IconButton(
                 icon: const Icon(Icons.wallet),
                 color: CCTheme.primary,
                 onPressed: () {
-                  if (User.userId != 0) SetCurrentPage(NavigationPage.GOAL);
-                  else ErrorPopUp.showAlertDialog(context, "You must log in before accessing your budget data");
+                  if (User.id != 0){
+                    SetCurrentPage(NavigationPage.GOAL);
+                  }
+                  else {
+                    PopUp.showAlertDialog(context, "Error", "You must log in before accessing your budget data");
+                  }
                 },
               ),
               IconButton(
                 icon: const Icon(Icons.account_circle),
                 color: CCTheme.primary,
                 onPressed: () {
-                  if (User.userId != 0)
+                  if (User.id != 0){
                     SetCurrentPage(NavigationPage.ACCOUNT);
-                  else
-                    ErrorPopUp.showAlertDialog(context, "You must log in before accessing your budget data");
+                  }
+                  else {
+                    PopUp.showAlertDialog(context, "Error", "You must log in before accessing your budget data");
+                  }
                 },
               ),
             ],
@@ -89,8 +104,12 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
           backgroundColor: CCTheme.primary,
           foregroundColor: Colors.white,
           onPressed: () {
-            if (User.userId != 0) print('Floating button pressed');
-            else ErrorPopUp.showAlertDialog(context, "You must log in before accessing your budget data");
+            if (User.id != 0) {
+              print('Floating button pressed');
+            }
+            else {
+              PopUp.showAlertDialog(context, "Error", "You must log in before accessing your budget data");
+            }
           },
           shape: const CircleBorder(),
           child: const Icon(Icons.add),

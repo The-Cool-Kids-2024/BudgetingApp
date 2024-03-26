@@ -35,6 +35,8 @@ flowchart TD;
     F -- "Log out" button --> A
 ```
 
+![image](_static/erd.PNG)
+
 ### Login Page
 
 The Login Page is the first page displayed to the user upon opening the app. It allows users to either enter their login credentials or create an account.
@@ -88,6 +90,7 @@ Explain how the information domain of your system is transformed into data struc
 - "Budget Summary" text output based on the "Budget Page" data.
   
 ### Income/Expense Page
+
 ### Budget Page
 - "Budget" Icon
 - "Budget Indicator" Icon
@@ -95,11 +98,19 @@ Explain how the information domain of your system is transformed into data struc
 - "Yearly Statement" button
 - Monthly Statement button opens up to the expense page on that month
 - Yearly Statement button opens up to the expense page on that year
+
 ### Goals Page
 - "Goal Amount" number field
 - "Goal date" date field
 - "Goal monthly" number field (appears based on "Switch to monthly goal")
 - "Switch to monthly goal" button
+
 ### Account Page
+- "First Name" text field
+- "Last Name" text field
+- "Email" text field
+- "Username" text field
+- "Save Changes" button
+
 
 The account page displays the user's first name, last name, username, and email. From this page, users can choose to change these fields or log out.
