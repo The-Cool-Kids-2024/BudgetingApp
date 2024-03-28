@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:test_flutter/CCTheme.dart';
-import 'package:test_flutter/Pages/GoalsPage.dart';
+import 'package:test_flutter/Pages/Goals/GoalObject.dart';
+import 'package:test_flutter/Pages/Goals/GoalsPage.dart';
 
 import 'Pages/AccountPage.dart';
 import 'Pages/BudgetPage.dart';
@@ -16,10 +17,14 @@ class MainNavigationWidget extends StatefulWidget {
 
 class _MainNavigationWidgetState extends State<MainNavigationWidget> {
 
+  static final List<GoalObject> goals = [
+    GoalObject("House", 1000000, DateTime.now(), 500, DateTime.now()),
+    GoalObject("House", 1000000, DateTime.now(), 500, DateTime.now()),
+  ];
   // So that states are maintained, make an object for each page.
   HomePage homePage = const HomePage();
   BudgetPage budgetPage = const BudgetPage();
-  GoalsPage goalsPage = const GoalsPage();
+  GoalsPage goalsPage = GoalsPage(goals: goals);
   AccountPage accountPage = const AccountPage();
 
   late Widget currentPage;
@@ -110,7 +115,7 @@ case NavigationPage.BUDGET:
           currentPage = const BudgetPage();
           break;
 case NavigationPage.GOAL:
-          currentPage = const GoalsPage();
+          currentPage = GoalsPage(goals: goals);
           break;
 case NavigationPage.ACCOUNT:
           currentPage = const AccountPage();

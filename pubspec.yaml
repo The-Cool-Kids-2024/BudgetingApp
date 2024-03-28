@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_nav_bar: ^5.0.6
   flutter_speed_dial: ^7.0.0
+  syncfusion_flutter_datepicker: ^25.1.37
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
