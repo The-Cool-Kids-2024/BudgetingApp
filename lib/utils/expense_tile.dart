@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:test_flutter/CCTheme.dart';
+import './expenseItem.dart';
 
 // TODO : fix removeTransaction
 
 
 class ExpenseTile extends StatelessWidget {
-  final String transactionName;
-  final double transactionAmount;
+  // final String transactionName;
+  // final double transactionAmount;
   // Function() removeTransaction;
 
-  ExpenseTile({
-    super.key,
-    required this.transactionName,
-    required this.transactionAmount,
-    // required this.removeTransaction,
-    });
+  // ignore: constant_identifier_names
+  static const double FONT_SIZE = 20.5;
+
+  // ExpenseTile({
+  //   super.key,
+  //   required this.transactionName,
+  //   required this.transactionAmount,
+  //   required this.removeTransaction,
+  //   });
+
+  void filler() {
+    return;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +35,16 @@ class ExpenseTile extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Text(transactionName),
-            Text(transactionAmount.toString()),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: Text(transactionName,
+                style: TextStyle(fontSize: FONT_SIZE),),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: Text(transactionAmount.toString(),
+                style: TextStyle(fontSize: FONT_SIZE)),
+            ),
             const Icon(Icons.clear_sharp),
             // IconButton(
               // icon: const Icon(Icons.clear_sharp),
