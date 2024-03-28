@@ -1,0 +1,43 @@
+# Thursday, February 08, 2024 
+
+## Time 
+
+- 11:55 am - 12:20pm 
+
+## Attendees/Role 
+
+- Ethan Timpe 
+
+- Hana Tollossa 
+
+- Jahcorian Ivery 
+
+- Varshitha Thanam   
+
+## Decisions Made 
+
+- We discuss how everyone is feeling about "Flutter" (see the design folder). 
+
+- We brainstorm about the designee of our app. 
+
+## Action Items 
+
+- We should bring our design idea using Flutter. 
+
+## Questions or Concerns 
+
+### Next meeting 
+
+- we should decide which members will work on which component. 
+
+## Signatures 
+
+- Hana Tollossa
+- Varshitha Thanam
+- Ethan Timpe
+- JahCorian Ivery
+
+ 
+
+ 
+

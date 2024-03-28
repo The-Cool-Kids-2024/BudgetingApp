@@ -1,0 +1,39 @@
+# Thursday, February 15, 2024  
+
+## Time  
+
+- 11:55 am - 12:20 pm  
+
+## Attendees/Role  
+
+- Ethan Timpe  
+- Alexander Hooper 
+- Hana Tollossa  
+- Jahcorian Ivery
+- Varshitha Thanam  
+
+## Decisions Made   
+
+- We update our Software development plan and requirements.
+- We discussed who will be doing what part of the app. 
+
+## Action Items  
+
+- We should start working on coding each feature of our app.
+- We should start working on our design plan. 
+
+## Questions or Concerns  
+
+
+### Next meeting  
+
+- We will be presenting our design ideas. 
+
+ 
+
+## Signatures  
+
+- Hana Tollossa
+- Ethan Timpe
+
+
