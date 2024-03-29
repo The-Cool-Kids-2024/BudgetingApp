@@ -11,13 +11,12 @@ class GoalsPage extends StatefulWidget {
 }
 
 class _GoalsPageState extends State<GoalsPage> {
-
   double amount = 10.6;
   @override
   Widget build(BuildContext context) {
     return GridView.count(crossAxisCount: 2, children:  <Widget>[
       Card(
-        color: CCTheme.accent,
+        color: CCTheme.secondary,
         elevation: 5,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

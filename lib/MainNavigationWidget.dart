@@ -38,6 +38,7 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
           title: Image.asset('deliverables/_static/logo-green.png',
               fit: BoxFit.fitHeight),
           centerTitle: true,
+          backgroundColor: CCTheme.background,
         ),
         body: currentPage,
         extendBody: true,

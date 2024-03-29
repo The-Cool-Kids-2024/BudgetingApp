@@ -73,11 +73,13 @@ class _AccountPageState extends State<AccountPage> {
                 );
                 // If account successfully created, go back to login page
                 if (result.affectedRows == 1) {
-                  PopUp.showAlertDialog(context, "Success", "Account updated successfully");
+                  PopUp.showAlertDialog(
+                      context, "Success", "Account updated successfully");
                 }
               } on Exception catch (e) {
                 if (e.toString().contains('violates check constraint')) {
-                  PopUp.showAlertDialog(context, 'Error', 'All fields must have a value');
+                  PopUp.showAlertDialog(
+                      context, 'Error', 'All fields must have a value');
                 }
               } catch (e, s) {
                 print('\x1B[33mException details:\n $e\x1B[0m');

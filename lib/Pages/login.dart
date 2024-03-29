@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
 
               // Attempt to find user with credentials
               final result = await conn.execute(
-                r'SELECT id, username FROM budgeting_user WHERE username = $1 AND pass = $2',
+                r'SELECT id, username, first_name, last_name FROM budgeting_user WHERE username = $1 AND pass = $2',
                 parameters: [usernameController.text, passwordHash.toString()],
               );
 
@@ -71,6 +71,8 @@ class _LoginPageState extends State<LoginPage> {
                 print('id:' + result[0][0].toString());
                 User.id = int.parse(result[0][0].toString());
                 User.username = result[0][1].toString();
+                User.firstName = result[0][2].toString();
+                User.lastName = result[0][3].toString();
               } else {
                 PopUp.showAlertDialog(
                     context, "Error", 'Username or password is incorrect.');

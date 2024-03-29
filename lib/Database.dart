@@ -6,7 +6,7 @@ class Database {
   static void init() async {
     conn = await Connection.open(
       Endpoint(
-        host: 'aquacleanpro.org',
+        host: '192.168.1.100',
         database: 'postgres',
         username: 'aquacleanpro',
         password: 'buck',
