@@ -33,21 +33,18 @@ class _SetupGoalPageState extends State<SetupGoalPage> {
 
       appBar: AppBar(
         backgroundColor: CCTheme.background,
-        title: Text((_goalObject.name.isEmpty? "New " : _goalObject.name) + " Goal"),
+        title: Text("${_goalObject.name.isEmpty? "New " : _goalObject.name} Goal"),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          Container(
-
-            child: TextField(
-              controller: _nameController,
-              decoration: const InputDecoration(
-                labelText: "Goal Name",
-                hintText: "Enter a name for your goal",
-              ),
-
+          TextField(
+            controller: _nameController,
+            decoration: const InputDecoration(
+              labelText: "Goal Name",
+              hintText: "Enter a name for your goal",
             ),
+
           ),
           TextField(
             keyboardType: const TextInputType.numberWithOptions(decimal: true),

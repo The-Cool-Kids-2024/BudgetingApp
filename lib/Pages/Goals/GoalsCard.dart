@@ -9,7 +9,7 @@ class GoalsCard extends StatefulWidget {
   final GoalObject goalObject;
   final Color backgroundColor;
 
-  const GoalsCard(
+  GoalsCard(
       {super.key,
       required this.goalObject,
       this.backgroundColor = CCTheme.accent});
@@ -35,7 +35,9 @@ class _GoalsCardState extends State<GoalsCard> {
                   builder: (context) => SetupGoalPage(goalObject: goalObject)));
           result.then((value) => setState(() {
                 if (value != null) {
-                  goalObject = value;
+                  setState(() {
+                    goalObject = value;
+                  });
                 }
               }));
         },
@@ -48,12 +50,22 @@ class _GoalsCardState extends State<GoalsCard> {
                 Text(goalObject.name,
                     style: const TextStyle(
                         fontSize: 24, color: CCTheme.background)),
-                DollarAmount(
-                    amount: goalObject.currentAmount,
-                    fontSize: 48,
-                    textColor: CCTheme.background),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    DollarAmount(
+                        amount: goalObject.currentAmount,
+                        fontSize: 48,
+                        textColor: CCTheme.background),
+                    Container(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Text("(${(goalObject.currentAmount / goalObject.goalAmount * 100).toStringAsFixed(1)}%)",
+                          style: const TextStyle(fontSize: 24, color: CCTheme.background)),
+                    ),
+                  ],
+                ),
                 Text("By ${DateFormat.yMMMd().format(goalObject.goalEndDate)}",
-                    style: TextStyle(fontSize: 12, color: CCTheme.background))
+                    style: const TextStyle(fontSize: 12, color: CCTheme.background))
               ],
             )));
   }

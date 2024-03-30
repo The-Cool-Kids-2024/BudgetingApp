@@ -20,8 +20,8 @@ class MainNavigationWidget extends StatefulWidget {
 class _MainNavigationWidgetState extends State<MainNavigationWidget> {
 
   static final List<GoalObject> goals = [
-    GoalObject("House", 1000000, DateTime.now(), 500, DateTime.now()),
-    GoalObject("House", 1000000, DateTime.now(), 500, DateTime.now()),
+    GoalObject("House", 1000000, DateTime.now(), 5678.90, DateTime.now()),
+    GoalObject("Car", 35000, DateTime.now(), 798.27, DateTime.now()),
   ];
   // So that states are maintained, make an object for each page.
   HomePage homePage = const HomePage();
