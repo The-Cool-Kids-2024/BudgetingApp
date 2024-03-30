@@ -7,14 +7,15 @@ class GoalOverview extends StatefulWidget {
   const GoalOverview({super.key, required this.goalObject});
 
   @override
-  State<GoalOverview> createState() => _GoalOverviewState(goalObject);
+  State<GoalOverview> createState() => _GoalOverviewState();
 }
 
 class _GoalOverviewState extends State<GoalOverview> {
-  GoalObject goalObject;
-  _GoalOverviewState(this.goalObject);
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      child: Text(widget.goalObject.name),
+    );
   }
 }

@@ -9,6 +9,7 @@ class GoalObject {
 
   GoalObject(this.name, this.goalAmount, this.goalEndDate, this.currentAmount, this.dateCreated, {this.contributions = const <Contribution>[]});
   GoalObject.empty() : name = "", goalAmount = 0, goalEndDate = DateTime.now(), currentAmount = 0, dateCreated = DateTime.now(), contributions = const <Contribution>[];
+
 }
 
 class Contribution {

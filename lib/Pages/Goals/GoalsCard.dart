@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:test_flutter/CCTheme.dart';
@@ -50,14 +51,16 @@ class _GoalsCardState extends State<GoalsCard> {
                 Text(goalObject.name,
                     style: const TextStyle(
                         fontSize: 24, color: CCTheme.background)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Wrap(
                   children: [
-                    DollarAmount(
-                        amount: goalObject.currentAmount,
-                        fontSize: 48,
-                        textColor: CCTheme.background),
+                    Center(
+                      child: DollarAmount(
+                          amount: goalObject.currentAmount,
+                          fontSize: 48,
+                          textColor: CCTheme.background),
+                    ),
                     Container(
+                      alignment: Alignment.center,
                       padding: const EdgeInsets.only(left: 8),
                       child: Text("(${(goalObject.currentAmount / goalObject.goalAmount * 100).toStringAsFixed(1)}%)",
                           style: const TextStyle(fontSize: 24, color: CCTheme.background)),
