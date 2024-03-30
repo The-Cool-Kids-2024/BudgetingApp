@@ -2,63 +2,22 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:test_flutter/Interfaces/IHavePageName.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatefulWidget implements IHavePageName {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
+
+  @override
+  String getPageName() => "Common Cents";
 }
 
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actionsIconTheme: const IconThemeData(
-            size: 30.0,
-            color: Colors.black,
-            opacity: 10.0
-        ),
-        title: const Text('CommonCents',
-            style:
-            TextStyle(fontSize: 45, color: Color.fromRGBO(34, 203, 67, 1))),
-        titleSpacing: 00.0,
-        centerTitle: true,
-        toolbarHeight: 60.2,
-        toolbarOpacity: 0.8,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(25),
-              bottomLeft: Radius.circular(25)),
-        ),
-        elevation: 0.00,
-        backgroundColor: const Color.fromARGB(245, 222, 221, 227),
-
-        leading: GestureDetector(
-          onTap: () { /* Write listener code here */ },
-          child:const  Icon(
-              Icons.home,
-              color: Color.fromRGBO(34, 203, 67, 1)  // add custom icons also
-          ),
-        ),
-
-        actions: <Widget>[
-          Padding(
-              padding: const EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {},
-                child: const Icon(
-                  Icons.perm_identity_rounded,
-                  size: 26.0,
-                  color: Color.fromRGBO(34, 203, 67, 1),
-                ),
-
-              )
-          ),
-
-        ],
-      ),
       backgroundColor: const Color.fromARGB(245, 234, 236, 238),
       body: SafeArea(
           child: Column(
