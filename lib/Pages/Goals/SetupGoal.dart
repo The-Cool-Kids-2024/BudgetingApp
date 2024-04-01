@@ -73,7 +73,9 @@ class _SetupGoalPageState extends State<SetupGoalPage> {
                 CalendarDatePicker(
                     initialDate: DateTime.now(),
                     firstDate: DateTime.now(),
+
                     lastDate: DateTime.now().add(const Duration(days: 999999)),
+
                     onDateChanged: (d) {}
                 ),
               ],
