@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:test_flutter/CCTheme.dart';
+import 'package:test_flutter/Interfaces/IHavePageName.dart';
 import 'package:test_flutter/Pages/Goals/GoalObject.dart';
 import 'package:test_flutter/Pages/Goals/GoalsPage.dart';
 
@@ -38,6 +39,58 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
     return Scaffold(
       body: currentPage,
       extendBody: true,
+      appBar:
+      /* Talk about this on monday.
+      AppBar(
+        actionsIconTheme: const IconThemeData(
+            size: 30.0,
+            color: Colors.black,
+            opacity: 10.0
+        ),
+        title: const Text('CommonCents',
+            style:
+            TextStyle(fontSize: 45, color: Color.fromRGBO(34, 203, 67, 1))),
+        titleSpacing: 00.0,
+        centerTitle: true,
+        toolbarHeight: 60.2,
+        toolbarOpacity: 0.8,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(25),
+              bottomLeft: Radius.circular(25)),
+        ),
+        elevation: 0.00,
+        backgroundColor: const Color.fromARGB(245, 222, 221, 227),
+
+        leading: GestureDetector(
+          onTap: () { /* Write listener code here */ },
+          child:const  Icon(
+              Icons.home,
+              color: Color.fromRGBO(34, 203, 67, 1)  // add custom icons also
+          ),
+        ),
+
+        actions: <Widget>[
+          Padding(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {},
+                child: const Icon(
+                  Icons.perm_identity_rounded,
+                  size: 26.0,
+                  color: Color.fromRGBO(34, 203, 67, 1),
+                ),
+
+              )
+          ),
+
+        ],
+      ),
+      */
+      AppBar(
+        title: Text(getCurrentPageName()),
+        backgroundColor: CCTheme.accent,
+      ),
       bottomNavigationBar: BottomAppBar(
         notchMargin: 5,
         shape: const CircularNotchedRectangle(),
@@ -122,6 +175,15 @@ case NavigationPage.ACCOUNT:
           break;
       }
     });
+  }
+
+  String getCurrentPageName() {
+    if(currentPage is IHavePageName) {
+      return (currentPage as IHavePageName).getPageName();
+    }
+    else {
+      return currentPage.runtimeType.toString().replaceAll("Page", "");
+    }
   }
 }
 

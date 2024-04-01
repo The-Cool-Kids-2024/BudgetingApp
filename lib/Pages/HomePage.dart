@@ -1,13 +1,15 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:test_flutter/Interfaces/IHavePageName.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatefulWidget implements IHavePageName {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
+
+  @override
+  String getPageName() => "Common Cents";
 }
 
 class _HomePageState extends State<HomePage> {
