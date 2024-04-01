@@ -38,7 +38,8 @@ Container CCContainer(String title, String desc, {Color textColor = CCTheme.prim
           ),
         ],),
     child: Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(height: height),
         Text(

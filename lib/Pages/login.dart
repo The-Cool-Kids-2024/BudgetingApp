@@ -74,6 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                 User.firstName = result[0][2].toString();
                 User.lastName = result[0][3].toString();
                 User.getEntries();
+                User.getGoals();
               } else {
                 PopUp.showAlertDialog(
                     context, "Error", 'Username or password is incorrect.');

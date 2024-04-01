@@ -4,6 +4,7 @@ import 'package:test_flutter/CCTheme.dart';
 import 'package:test_flutter/Pages/AddEntry.dart';
 import 'package:test_flutter/Pages/AddGoal.dart';
 import 'package:test_flutter/Pages/BudgetPage.dart';
+import 'package:test_flutter/Pages/GoalsPage.dart';
 
 import 'Pages/AccountPage.dart';
 import 'Pages/HomePage.dart';
@@ -196,7 +197,7 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
           currentPage = const BudgetPage();
           break;
         case NavigationPage.GOAL:
-          //currentPage = GoalsPage(goals: goals);
+          currentPage = const GoalsPage();
           break;
         case NavigationPage.ACCOUNT:
           currentPage = const AccountPage();
@@ -212,11 +213,4 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
   }
 }
 
-enum NavigationPage {
-  LOGIN,
-  CREATEACCOUNT,
-  HOME,
-  BUDGET,
-  GOAL,
-  ACCOUNT
-}
+enum NavigationPage { LOGIN, CREATEACCOUNT, HOME, BUDGET, GOAL, ACCOUNT }
