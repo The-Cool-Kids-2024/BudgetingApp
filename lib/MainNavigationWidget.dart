@@ -167,14 +167,21 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
               child: const Icon(Icons.attach_money),
               label: 'Add Transaction',
               onTap: () {
-                print('Add Transaction');
+                if (User.id != 0){
+                  print('Add Transaction');
+                }
+                else{
+                  PopUp.showAlertDialog(context, "Error",
+                        "You must log in before adding budget data");
+                }
               },
             ),
             SpeedDialChild(
               child: const Icon(Icons.wallet),
               label: 'Add Goal',
               onTap: () {
-                var result = Navigator.push(
+                if (User.id != 0){
+                  var result = Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
@@ -186,6 +193,11 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
                         });
                       }
                     }));
+                }
+                else{
+                  PopUp.showAlertDialog(context, "Error",
+                        "You must log in before adding budget data");
+                }
               },
             ),
           ],
