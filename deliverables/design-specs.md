@@ -35,6 +35,8 @@ flowchart TD;
     F -- "Log out" button --> A
 ```
 
+![image](_static/erd.PNG)
+
 ### Login Page
 
 The Login Page is the first page displayed to the user upon opening the app. It allows users to either enter their login credentials or create an account.
@@ -103,5 +105,8 @@ Explain how the information domain of your system is transformed into data struc
 - "Goal monthly" number field (appears based on "Switch to monthly goal")
 - "Switch to monthly goal" button
 ### Account Page
-
-The account page displays the user's first name, last name, username, and email. From this page, users can choose to change these fields or log out.
+- "First Name" text field
+- "Last Name" text field
+- "Email" text field
+- "Username" text field
+- "Save Changes" button
