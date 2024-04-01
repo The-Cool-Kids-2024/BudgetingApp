@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:test_flutter/CCTheme.dart';
-import 'package:test_flutter/Interfaces/IHavePageName.dart';
-import 'package:test_flutter/Pages/Goals/GoalObject.dart';
-import 'package:test_flutter/Pages/Goals/GoalsPage.dart';
+import 'package:test_flutter/Pages/AddEntry.dart';
+import 'package:test_flutter/Pages/AddGoal.dart';
+import 'package:test_flutter/Pages/BudgetPage.dart';
 
 import 'Pages/AccountPage.dart';
-import 'Pages/Budget/BudgetPage.dart';
-import 'Pages/Goals/SetupGoal.dart';
 import 'Pages/HomePage.dart';
 import 'Pages/Login.dart';
 import 'Pages/CreateAccountPage.dart';
@@ -22,16 +20,11 @@ class MainNavigationWidget extends StatefulWidget {
 }
 
 class _MainNavigationWidgetState extends State<MainNavigationWidget> {
-  static final List<GoalObject> goals = [
-    GoalObject("House", 1000000, DateTime.now(), 500, DateTime.now()),
-    GoalObject("House", 1000000, DateTime.now(), 500, DateTime.now()),
-  ];
   // So that states are maintained, make an object for each page.
   LoginPage loginPage = const LoginPage();
   CreateAccountPage createAccountPage = const CreateAccountPage();
   HomePage homePage = const HomePage();
   BudgetPage budgetPage = const BudgetPage();
-  GoalsPage goalsPage = GoalsPage(goals: goals);
   AccountPage accountPage = const AccountPage();
 
   late Widget currentPage;
@@ -92,7 +85,7 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
         ],
       ),
       */
-        AppBar(
+            AppBar(
           title: Image.asset('deliverables/_static/logo-green.png',
               fit: BoxFit.fitHeight),
           centerTitle: true,
@@ -167,12 +160,12 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
               child: const Icon(Icons.attach_money),
               label: 'Add Transaction',
               onTap: () {
-                if (User.id != 0){
-                  print('Add Transaction');
-                }
-                else{
+                if (User.id != 0) {
+                  var result = Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AddEntryPage()));
+                } else {
                   PopUp.showAlertDialog(context, "Error",
-                        "You must log in before adding budget data");
+                      "You must log in before adding budget data");
                 }
               },
             ),
@@ -180,23 +173,12 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
               child: const Icon(Icons.wallet),
               label: 'Add Goal',
               onTap: () {
-                if (User.id != 0){
-                  var result = Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            SetupGoalPage(goalObject: GoalObject.empty())));
-                result.then((value) => setState(() {
-                      if (value != null) {
-                        setState(() {
-                          goals.add(value);
-                        });
-                      }
-                    }));
-                }
-                else{
+                if (User.id != 0) {
+                  var result = Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AddGoalPage()));
+                } else {
                   PopUp.showAlertDialog(context, "Error",
-                        "You must log in before adding budget data");
+                      "You must log in before adding budget data");
                 }
               },
             ),
@@ -214,7 +196,7 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
           currentPage = const BudgetPage();
           break;
         case NavigationPage.GOAL:
-          currentPage = GoalsPage(goals: goals);
+          //currentPage = GoalsPage(goals: goals);
           break;
         case NavigationPage.ACCOUNT:
           currentPage = const AccountPage();
@@ -224,17 +206,17 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
           break;
         case NavigationPage.CREATEACCOUNT:
           currentPage = const CreateAccountPage();
+          break;
       }
     });
   }
-
-  String getCurrentPageName() {
-    if (currentPage is IHavePageName) {
-      return (currentPage as IHavePageName).getPageName();
-    } else {
-      return currentPage.runtimeType.toString().replaceAll("Page", "");
-    }
-  }
 }
 
-enum NavigationPage { LOGIN, CREATEACCOUNT, HOME, BUDGET, GOAL, ACCOUNT }
+enum NavigationPage {
+  LOGIN,
+  CREATEACCOUNT,
+  HOME,
+  BUDGET,
+  GOAL,
+  ACCOUNT
+}

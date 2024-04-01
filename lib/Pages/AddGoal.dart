@@ -1,30 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_flutter/CCTheme.dart';
-import 'package:test_flutter/Pages/Goals/GoalObject.dart';
 
-class SetupGoalPage extends StatefulWidget {
-  final GoalObject goalObject;
-  const SetupGoalPage({super.key, required this.goalObject});
-
+class AddGoalPage extends StatefulWidget {
 
   @override
-  State<SetupGoalPage> createState() => _SetupGoalPageState(goalObject);
+  State<AddGoalPage> createState() => _SetupGoalPageState();
 }
 
-class _SetupGoalPageState extends State<SetupGoalPage> {
-
-
-
-  final GoalObject _goalObject;
+class _SetupGoalPageState extends State<AddGoalPage> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _goalAmountController = TextEditingController();
-  _SetupGoalPageState(this._goalObject) {
-    _nameController.text = _goalObject.name;
-    _goalAmountController.text = _goalObject.goalAmount.toString();
-  }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -33,20 +19,18 @@ class _SetupGoalPageState extends State<SetupGoalPage> {
 
       appBar: AppBar(
         backgroundColor: CCTheme.background,
-        title: Text((_goalObject.name.isEmpty? "New " : _goalObject.name) + " Goal"),
+        title: Text("New Goal"),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
           Container(
-
             child: TextField(
               controller: _nameController,
               decoration: const InputDecoration(
                 labelText: "Goal Name",
                 hintText: "Enter a name for your goal",
               ),
-
             ),
           ),
           TextField(
@@ -56,14 +40,11 @@ class _SetupGoalPageState extends State<SetupGoalPage> {
               labelText: "Goal Amount",
               hintText: "Enter how much you want to save",
             ),
-
           ),
-
           Container(
             margin: const EdgeInsets.only(top: 32),
 
             child: Column(
-
               children: [
                 Container(
                   padding: const EdgeInsets.all(8),
@@ -80,14 +61,12 @@ class _SetupGoalPageState extends State<SetupGoalPage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 128),
-            child: CupertinoButton(color: CCTheme.accent, onPressed: () {
+            padding: const EdgeInsets.only(top: 20),
+            child: CupertinoButton(color: CCTheme.primary, onPressed: () {
               if(_nameController.text.isEmpty || _goalAmountController.text.isEmpty) {
                 return;
               }
-              _goalObject.name = _nameController.text;
-              _goalObject.goalAmount = double.parse(_goalAmountController.text);
-              Navigator.pop(context, _goalObject);
+              Navigator.pop(context);
             }, child: const Text("Save Goal")),
           )
         ],

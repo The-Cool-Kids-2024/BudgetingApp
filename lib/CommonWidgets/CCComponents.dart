@@ -23,7 +23,7 @@ Container CCHeaderContainer(String title, String desc, {Color textColor = Colors
   );
 }
 
-Container CCContainer(String title, String desc, {Color textColor = CCTheme.primary, Color backgroundColor = CCTheme.complement, double height = 80}) {
+Container CCContainer(String title, String desc, {Color textColor = CCTheme.primary, Color backgroundColor = CCTheme.complement, double height = 40}) {
   return Container(
     width: 350,
     padding: EdgeInsets.all(20),
@@ -44,7 +44,7 @@ Container CCContainer(String title, String desc, {Color textColor = CCTheme.prim
         Text(
           '$title\n$desc',
           style: TextStyle(
-              fontSize: 28,
+              fontSize: 20,
               color: textColor,
               fontWeight: FontWeight.bold),
         ),
