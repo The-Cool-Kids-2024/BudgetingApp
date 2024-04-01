@@ -7,6 +7,7 @@ import 'package:test_flutter/Pages/Goals/GoalsPage.dart';
 
 import 'Pages/AccountPage.dart';
 import 'Pages/Budget/BudgetPage.dart';
+import 'Pages/Goals/SetupGoal.dart';
 import 'Pages/HomePage.dart';
 
 class MainNavigationWidget extends StatefulWidget {
@@ -149,7 +150,17 @@ class _MainNavigationWidgetState extends State<MainNavigationWidget> {
             child: const Icon(Icons.wallet),
             label: 'Add Goal',
             onTap: () {
-              print('Add Goal');
+              var result = Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => SetupGoalPage(goalObject: GoalObject.empty())));
+              result.then((value) => setState(() {
+                if (value != null) {
+                  setState(() {
+                    goals.add(value);
+                  });
+                }
+              }));
             },
           ),
         ],
