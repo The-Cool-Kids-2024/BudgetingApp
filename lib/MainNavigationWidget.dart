@@ -5,7 +5,7 @@ import 'package:test_flutter/Pages/Goals/GoalObject.dart';
 import 'package:test_flutter/Pages/Goals/GoalsPage.dart';
 
 import 'Pages/AccountPage.dart';
-import 'Pages/BudgetPage.dart';
+import 'Pages/Budget/BudgetPage.dart';
 import 'Pages/HomePage.dart';
 
 class MainNavigationWidget extends StatefulWidget {
