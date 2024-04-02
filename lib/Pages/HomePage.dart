@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
           CCSpacer(),
           CCContainer("Expenses", "-" + "\$" + User.getExpenses().toStringAsFixed(2), textColor: Colors.red),
           CCSpacer(),
-          CCContainer("Free Money", "\$${(User.getIncome() - User.getExpenses()).toStringAsFixed(2)}", textColor: Colors.black),
+          CCContainer("Net Balance", "\$${(User.getIncome() - User.getExpenses()).toStringAsFixed(2)}", textColor: Colors.black),
           CCSpacer(),
           CCHeaderContainer("", ""),
         ],

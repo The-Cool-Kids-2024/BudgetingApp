@@ -32,7 +32,7 @@ class _BudgetPageState extends State<BudgetPage> {
           ),
         ),
         CCHeaderContainer("Monthly Budget",
-            "Free Money: \$${(User.getIncome() - User.getExpenses()).toStringAsFixed(2)}"),
+            "Net Balance: \$${(User.getIncome() - User.getExpenses()).toStringAsFixed(2)}"),
         CCSpacer(),
       ],
     );
