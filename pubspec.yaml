@@ -41,6 +41,8 @@ dependencies:
   intl: ^0.19.0
   postgres: ^3.1.2
   crypto: ^3.0.3
+  toggle_switch: ^2.3.0
+  path_provider: ^2.1.2
 
 dev_dependencies:
   flutter_test:

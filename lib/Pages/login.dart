@@ -55,9 +55,14 @@ class _LoginPageState extends State<LoginPage> {
             onPressed: () async {
               Connection conn = Database.conn;
 
+              final salt = await conn.execute(
+                r'SELECT salt FROM budgeting_user WHERE username = $1',
+                parameters: [usernameController.text],
+              );
+
               // Hash password
-              var bytes = utf8.encode(passwordController.text);
-              var passwordHash = sha1.convert(bytes);
+              var bytes = utf8.encode(passwordController.text + salt[0][0].toString());
+              var passwordHash = sha256.convert(bytes);
 
               // Attempt to find user with credentials
               final result = await conn.execute(
@@ -73,6 +78,8 @@ class _LoginPageState extends State<LoginPage> {
                 User.username = result[0][1].toString();
                 User.firstName = result[0][2].toString();
                 User.lastName = result[0][3].toString();
+                User.getEntries();
+                User.getGoals();
               } else {
                 PopUp.showAlertDialog(
                     context, "Error", 'Username or password is incorrect.');
