@@ -1,22 +1,37 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: use_build_context_synchronously
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+import 'package:flutter/material.dart';
+import 'package:test_flutter/PopUp.dart';
+import '../CCTheme.dart';
+import 'package:postgres/postgres.dart';
+import 'package:crypto/crypto.dart';
+import 'dart:convert';
+import '../User.dart';
+import '../Database.dart';
+import '../MainNavigationWidget.dart';
+import 'CreateAccountPage.dart';
+
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Image.asset('deliverables/_static/logo-green.png',
-            fit: BoxFit.fitHeight),
-        centerTitle: true,
-      ),
       body: Center(
-        child: Column(
+          child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           TextFormField(
+            controller: usernameController,
             decoration: const InputDecoration(
               icon: Icon(Icons.perm_identity),
               border: UnderlineInputBorder(),
@@ -24,6 +39,7 @@ class Login extends StatelessWidget {
             ),
           ),
           TextFormField(
+            controller: passwordController,
             obscureText: true,
             decoration: const InputDecoration(
               icon: Icon(Icons.lock_outline),
@@ -33,17 +49,40 @@ class Login extends StatelessWidget {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 34, 203, 67),
+              backgroundColor: CCTheme.primary,
               foregroundColor: Colors.white,
             ),
-            onPressed: () {
-              print('Pressed "Log In"');
+            onPressed: () async {
+              Connection conn = Database.conn;
+
+              // Hash password
+              var bytes = utf8.encode(passwordController.text);
+              var passwordHash = sha1.convert(bytes);
+
+              // Attempt to find user with credentials
+              final result = await conn.execute(
+                r'SELECT id, username, first_name, last_name FROM budgeting_user WHERE username = $1 AND pass = $2',
+                parameters: [usernameController.text, passwordHash.toString()],
+              );
+
+              // If username and password match, log in and go to home page
+              if (result.length != 0) {
+                print('Log in successful');
+                print('id:' + result[0][0].toString());
+                User.id = int.parse(result[0][0].toString());
+                User.username = result[0][1].toString();
+                User.firstName = result[0][2].toString();
+                User.lastName = result[0][3].toString();
+              } else {
+                PopUp.showAlertDialog(
+                    context, "Error", 'Username or password is incorrect.');
+              }
             },
             child: const Text('Log In'),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 34, 203, 67),
+              backgroundColor: CCTheme.primary,
               foregroundColor: Colors.white,
             ),
             onPressed: () {
@@ -54,74 +93,6 @@ class Login extends StatelessWidget {
               );
             },
             child: const Text('Create Account'),
-          ),
-        ],
-      )),
-    );
-  }
-}
-
-class CreateAccountPage extends StatelessWidget {
-  const CreateAccountPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Create Account'),
-      ),
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          TextFormField(
-            decoration: const InputDecoration(
-              border: UnderlineInputBorder(),
-              labelText: 'First Name:',
-            ),
-          ),
-          TextFormField(
-            decoration: const InputDecoration(
-              border: UnderlineInputBorder(),
-              labelText: 'Last Name:',
-            ),
-          ),
-          TextFormField(
-            decoration: const InputDecoration(
-              border: UnderlineInputBorder(),
-              labelText: 'Username:',
-            ),
-          ),
-          TextFormField(
-            decoration: const InputDecoration(
-              border: UnderlineInputBorder(),
-              labelText: 'Email:',
-            ),
-          ),
-          TextFormField(
-            obscureText: true,
-            decoration: const InputDecoration(
-              border: UnderlineInputBorder(),
-              labelText: 'Password:',
-            ),
-          ),
-          TextFormField(
-            obscureText: true,
-            decoration: const InputDecoration(
-              border: UnderlineInputBorder(),
-              labelText: 'Confirm Password:',
-            ),
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Color.fromARGB(255, 34, 203, 67),
-              foregroundColor: Colors.white,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text('Submit'),
           ),
         ],
       )),

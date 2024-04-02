@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_flutter/CCTheme.dart';
 import 'package:test_flutter/Pages/Budget/MonthlyBudgetPage.dart';
 import 'package:test_flutter/Pages/Budget/YearlyBudgetPage.dart';
 
@@ -31,7 +32,7 @@ class _BudgetPageState extends State<BudgetPage> {
               // Button style: Background color, Shape, Padding
               style: ButtonStyle(
                 // Background color: Green
-                backgroundColor: MaterialStateProperty.all(Colors.green),
+                backgroundColor: MaterialStateProperty.all(CCTheme.primary),
                 // Shape: Rounded Rectangle
                 shape: MaterialStateProperty.all(
                   // BorderRadius: 10
@@ -72,7 +73,7 @@ class _BudgetPageState extends State<BudgetPage> {
               // Button
               style: ButtonStyle(
                 // Background color: Green
-                backgroundColor: MaterialStateProperty.all(Colors.green),
+                backgroundColor: MaterialStateProperty.all(CCTheme.primary),
                 // Shape: Rounded Rectangle
                 shape: MaterialStateProperty.all(
                   // BorderRadius: 10
