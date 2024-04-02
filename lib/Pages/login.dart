@@ -62,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
 
               // Hash password
               var bytes = utf8.encode(passwordController.text + salt[0][0].toString());
-              var passwordHash = sha1.convert(bytes);
+              var passwordHash = sha256.convert(bytes);
 
               // Attempt to find user with credentials
               final result = await conn.execute(

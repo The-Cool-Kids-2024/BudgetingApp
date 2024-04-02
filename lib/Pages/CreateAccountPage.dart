@@ -91,7 +91,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                 // Hash password
                 String salt = getRandomString(32);
                 var bytes = utf8.encode(_passwordController.text + salt);
-                var passwordHash = sha1.convert(bytes);
+                var passwordHash = sha256.convert(bytes);
 
                 try {
                   // Attempt to add user input to database as budgeting_user
