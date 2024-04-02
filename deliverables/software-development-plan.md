@@ -12,5 +12,5 @@
 * February 29: Design Specification Document.
 * March 15: Requirements updated with evaluation methods.
 * March 21: Coded UI for each page.
-* March 28: MVP
+* April 5: MVP
   
