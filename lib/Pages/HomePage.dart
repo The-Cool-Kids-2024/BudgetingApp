@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:test_flutter/CCTheme.dart';
-import 'package:test_flutter/Interfaces/IHavePageName.dart';
-import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:test_flutter/Interfaces/IHavePageName.dart';
 import '../CommonWidgets/CCComponents.dart';
+import '../User.dart';
 
-class HomePage extends StatefulWidget implements IHavePageName {
+class HomePage extends StatefulWidget{
   const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
-
-  @override
-  String getPageName() => "Common Cents";
 }
 
 class _HomePageState extends State<HomePage> {
@@ -39,14 +33,12 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          CCHeaderContainer("Welcome Back,", "Ethan"),
-          CCContainer("Income", "\$500.00"),
+          CCHeaderContainer("Welcome Back,", User.firstName),
+          CCContainer("Income", "\$" + User.getIncome().toStringAsFixed(2)),
           CCSpacer(),
-          CCContainer("Expenses", "\$300.00"),
+          CCContainer("Expenses", "-" + "\$" + User.getExpenses().toStringAsFixed(2), textColor: Colors.red),
           CCSpacer(),
-          CCContainer("Budget", ""),
-          CCSpacer(),
-          CCContainer("Goal", "\$59.59"),
+          CCContainer("Free Money", "\$${(User.getIncome() - User.getExpenses()).toStringAsFixed(2)}", textColor: Colors.black),
           CCSpacer(),
           CCHeaderContainer("", ""),
         ],
