@@ -1,14 +1,14 @@
 DROP TABLE budgeting_entry;
 DROP TABLE budgeting_goal;
 DROP TABLE budgeting_user;
-DROP TYPE ENTRY_TYPE;
 
 CREATE TABLE budgeting_user (
-	id			SERIAL PRIMARY KEY,
+	id			INTEGER PRIMARY KEY,
 	first_name	VARCHAR(32) NOT NULL,
 	last_name	VARCHAR(32) NOT NULL,
 	username	VARCHAR(16) UNIQUE,
 	email		VARCHAR(64) UNIQUE,
+	salt		VARCHAR(32) NOT NULL,
 	pass		VARCHAR(256),
 	CHECK (first_name <> ''),
 	CHECK (last_name <> ''),
