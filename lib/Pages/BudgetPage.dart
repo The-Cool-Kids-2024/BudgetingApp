@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:test_flutter/CCTheme.dart';
-import '../utils/expense_tile.dart';
+// import '../utils/expense_tile.dart';
+import '../utils/expenseItem.dart';
 
 class BudgetPage extends StatefulWidget {
   const BudgetPage({super.key});
@@ -16,10 +17,23 @@ class _BudgetPageState extends State<BudgetPage> {
   int totalBalance = 0;
 
   // list of expenses
-  List expenseList = [
-    ["Transaction A", 243.12],
-    ["Transaction B",5344.12]
-  ];
+  List<ExpenseItem> expenseItems = [
+      ExpenseItem(
+        transactionName: 'Groceries',
+        transactionType: 'Expense',
+        transactionAmount: 50.0,
+      ),
+      ExpenseItem(
+        transactionName: 'Salary',
+        transactionType: 'Income',
+        transactionAmount: 2000.0,
+      ),
+      ExpenseItem(
+        transactionName: 'Shopping',
+        transactionType: 'Expense',
+        transactionAmount: 100.0,
+      ),
+    ];
 
   void updateTotal(int amount) {
     setState(() {
@@ -41,19 +55,16 @@ class _BudgetPageState extends State<BudgetPage> {
     return Scaffold(
       backgroundColor: CCTheme.background,
       
-      body: Container(
-        child: ListView.builder(
-          itemCount: expenseList.length,
-          itemBuilder: (context, index) {
-            return ExpenseTile(
-              transactionName: expenseList[index][0],
-              transactionAmount: expenseList[index][1],
-              // removeTransaction: removeTransaction(index),
-        
-              );
-          },
-        ),
-      ),
+      body: ListView.builder(
+        itemCount: expenseItems.length,
+        itemBuilder: (context, index) {
+          ExpenseItem item = expenseItems[index];
+          return ListTile(
+            title: Text(item.transactionName),
+            subtitle: Text('${item.transactionType}: \$${item.transactionAmount.toStringAsFixed(2)}'),
+          );
+        },
+      )
     );
     // return const Center( child: Text("Budget Page"));
   }
