@@ -40,13 +40,13 @@ class _BudgetPageState extends State<BudgetPage> {
     for (var entry in User.entries) {
       if (entry.type == EntryType.INCOME) {
         col.children.add(
-            CCContainer(entry.title, entry.amount.toStringAsFixed(2)));
+            CCContainer(entry.title, '\$${entry.amount.toStringAsFixed(2)}'));
         col.children.add(
             CCSpacer());
       }
       else {
         col.children.add(
-            CCContainer(entry.title, '-${entry.amount.toStringAsFixed(2)}', textColor: Colors.red));
+            CCContainer(entry.title, '-\$${entry.amount.toStringAsFixed(2)}', textColor: Colors.red));
         col.children.add(
             CCSpacer());
       }

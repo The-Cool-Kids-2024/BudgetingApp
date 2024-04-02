@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:test_flutter/BudgetingEntry.dart';
+import 'package:intl/intl.dart';
 import 'package:test_flutter/CCTheme.dart';
 import '../CommonWidgets/CCComponents.dart';
 import '../User.dart';
@@ -36,11 +37,15 @@ class _GoalsPageState extends State<GoalsPage> {
       ],
     );
 
+    final DateFormat formatter = DateFormat('MM/dd/yy');
+
     for (var goal in User.goals) {
-      col.children.add(
-          CCContainer(goal.title, goal.amount.toStringAsFixed(2), textColor: CCTheme.accent));
-      col.children.add(
-          CCSpacer());
+      col.children.add(CCGoalContainer(
+          goal.title,
+          goal.amount.toStringAsFixed(2),
+          '${formatter.format(goal.date)}\nSuggested monthly payment: \$${(goal.amount / (goal.date.difference(DateTime.now()).inDays / 30).ceil()).toStringAsFixed(2)}',
+          textColor: CCTheme.accent));
+      col.children.add(CCSpacer());
     }
 
     return Scaffold(

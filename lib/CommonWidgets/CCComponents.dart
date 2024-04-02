@@ -39,14 +39,50 @@ Container CCContainer(String title, String desc, {Color textColor = CCTheme.prim
         ],),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: height),
         Text(
           '$title\n$desc',
           style: TextStyle(
               fontSize: 20,
               color: textColor,
+              fontWeight: FontWeight.bold),
+        ),
+      ],
+    ),
+  );
+}
+
+Container CCGoalContainer(String title, String desc, String goalDate, {Color textColor = CCTheme.primary, Color backgroundColor = CCTheme.complement, double height = 40}) {
+  return Container(
+    width: 350,
+    padding: EdgeInsets.all(20),
+    decoration: BoxDecoration(
+        color: backgroundColor, borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: Offset(0, 0), // changes position of shadow
+          ),
+        ],),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          '$title\n$desc',
+          style: TextStyle(
+              fontSize: 20,
+              color: textColor,
+              fontWeight: FontWeight.bold),
+        ),
+        Text(
+          'Goal Date: $goalDate',
+          style: const TextStyle(
+              fontSize: 14,
+              color: Colors.grey,
               fontWeight: FontWeight.bold),
         ),
       ],
