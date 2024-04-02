@@ -14,8 +14,9 @@ e: evaluation r: requirements
 2.0.r The app shall store and retrieve historical expense data for multiple users.
 
   - 2.0.e: The income and expense data will be stored in a database of the budget page and the user will be able to retrieve the data by clicking the monthly or yearly history button.
+  - 2.1.e: The database we use for testing our app is "Postgres". This database requires special credentials. These credentials will be provided by request.
 
-3.0.r The app shall allow users to plan large purchases by calculating monthly savings based on the total price and desired goal date.
+3.0.r  The app shall allow users to plan large purchases by calculating monthly savings based on the total price and desired goal date.
 
   - 3.0.e: This requirement will be evaluated by user testing on the goals and plans page. The user can input the total price for the purchase and the desired goal date and the app will calculate the monthly savings needed to reach the goal date.
 
