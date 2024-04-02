@@ -42,7 +42,7 @@ class _GoalsPageState extends State<GoalsPage> {
     for (var goal in User.goals) {
       col.children.add(CCGoalContainer(
           goal.title,
-          goal.amount.toStringAsFixed(2),
+          '\$${goal.amount.toStringAsFixed(2)}',
           '${formatter.format(goal.date)}\nSuggested monthly payment: \$${(goal.amount / (goal.date.difference(DateTime.now()).inDays / 30).ceil()).toStringAsFixed(2)}',
           textColor: CCTheme.accent));
       col.children.add(CCSpacer());
