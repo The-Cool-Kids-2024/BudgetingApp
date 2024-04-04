@@ -12,5 +12,9 @@
 * February 29: Design Specification Document.
 * March 15: Requirements updated with evaluation methods.
 * March 21: Coded UI for each page.
-* April 5: MVP
+* April 8: MVP
   
+## Changelog
+- 4/4/2024 - Removed requirement 3.1 and pushed MVP back to April 8 due to developer time constraints as a result of issues with development environment and GitHub.
+
+- 4/4/2024 - Added requirements 1.2, 1.3, and 1.4
