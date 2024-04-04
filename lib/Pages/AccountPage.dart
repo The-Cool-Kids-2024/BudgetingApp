@@ -71,6 +71,9 @@ class _AccountPageState extends State<AccountPage> {
                     User.id.toString()
                   ],
                 );
+                User.firstName = firstNameController.text;
+                User.lastName = lastNameController.text;
+                User.username = usernameController.text;
                 // If account successfully created, go back to login page
                 if (result.affectedRows == 1) {
                   PopUp.showAlertDialog(
