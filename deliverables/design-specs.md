@@ -28,11 +28,14 @@ flowchart TD;
     A -- "Login" button w/ valid credentials --> C[Home Page]
     A -- "Login" button w/ invalid credentials --> A
     B --> C
-    C -- "Budget" button --> D[Budget]
-    C -- "Add" button --> E[Add Income/Expense]
-    C -- "Profile" button --> F[View Profile]
-    C -- "Goal" button --> G[Goal] 
-    F -- "Log out" button --> A
+    C -- "Home" button --> D[Home]
+    C -- "Add Goal" button --> H[Add Goal Page]
+    H --> C
+    C -- "Add Income/Expense" button --> I[Add Income/Expense Page]
+    I --> C
+    C -- "Budget" button --> E[Budget Page]
+    C -- "Goals" button --> F[Goals Page]
+    C -- "Account" button --> G[Account Page]
 ```
 
 ![image](_static/erd.PNG)
