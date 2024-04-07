@@ -4,7 +4,7 @@ This MVP for our  budgeting app focuses on essential features that provide value
 ## Design
 ![image](https://github.com/The-Cool-Kids-2024/BudgetingApp/assets/156466938/4f67ff36-8f57-4c63-96d3-cd14c8e9798b)
 
-
+## Pages
 - Login: Allow users to create accounts or sign in using credentials.
     - ![image](https://github.com/The-Cool-Kids-2024/BudgetingApp/assets/156466938/4c2ca89a-049a-47f3-9c68-88b47110a66e)
   
