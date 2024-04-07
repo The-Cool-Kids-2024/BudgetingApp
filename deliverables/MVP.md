@@ -2,19 +2,7 @@
 
 This MVP for our  budgeting app focuses on essential features that provide value to users while keeping development costs and time to a minimum.
 ## Design
-flowchart TD;
-    A[Login Page] --"Create Account" button --> B[Create Account]
-    A -- "Login" button w/ valid credentials --> C[Home Page]
-    A -- "Login" button w/ invalid credentials --> A
-    B --> C
-    C -- "Home" button --> D[Home]
-    C -- "Add Goal" button --> H[Add Goal Page]
-    H --> C
-    C -- "Add Income/Expense" button --> I[Add Income/Expense Page]
-    I --> C
-    C -- "Budget" button --> E[Budget Page]
-    C -- "Goals" button --> F[Goals Page]
-    C -- "Account" button --> G[Account Page]
+![image](https://github.com/The-Cool-Kids-2024/BudgetingApp/assets/156466938/4f67ff36-8f57-4c63-96d3-cd14c8e9798b)
 
 
 - Login: Allow users to create accounts or sign in using credentials.
