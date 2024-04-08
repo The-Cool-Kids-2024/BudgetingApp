@@ -1,9 +1,10 @@
 # Minimum Viable Product (MVP)
+  - ![image](https://github.com/The-Cool-Kids-2024/BudgetingApp/assets/156466938/256843fb-564d-4a82-8cf2-3fcc28bdaea4)
 
 **e: evaluation**
 
 **d: design**
-  - ![image](https://github.com/The-Cool-Kids-2024/BudgetingApp/assets/156466938/256843fb-564d-4a82-8cf2-3fcc28bdaea4)
+
 
 
 **r: requirements**
