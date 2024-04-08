@@ -54,6 +54,8 @@ The Income and Expenses page will show a user an overview of all records transac
 This page will allow the user to view their buget statments either mothly or yearly.
 
 ### Goals Page
+This page will allow the user to see any future large purchases they plan to make and see their contributions towards that goal.
+
 ### Account Page
 
 The account page displays the user's first name, last name, username, and email. From this page, users can choose to change these fields or log out.
