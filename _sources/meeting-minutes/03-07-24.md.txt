@@ -1,0 +1,22 @@
+# Tuesday, March 7th, 2024
+## Time
+- 12:00 pm - 12:20 pm
+## Attendees/Role
+- Alexander Hooper
+- Ethan Timpe
+- Hana Tollossa
+- Jahcorian Ivery
+- Varshitha Thanam
+## Decisions Made
+- We discuss the design requirements.
+- We discuss how far everyone is in their part of the app code.
+## Action Items
+- All members should keep working on the code part of the app.
+- All members should keep working on the design requirements of the app.
+## Questions or Concerns
+
+## Signatures  
+- Hana Tollossa
+- Varshitha Thanam
+- Ethan Timpe
+- JahCorian Ivery

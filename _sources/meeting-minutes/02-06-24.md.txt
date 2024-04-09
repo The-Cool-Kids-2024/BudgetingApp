@@ -1,0 +1,27 @@
+# Tuesday, February 06, 2024
+## Time
+- 12:00 pm - 12:20 pm
+## Attendees/Role
+- Ethan Timpe
+- Hana Tollossa
+- Jahcorian Ivery
+- Varshitha Thanam
+  
+## Decisions Made
+- The App name will be “Common Cent$.”
+- App logo had been discussed.
+- The App design was discussed but not decided.
+- The Software Develppment plan has been discussed. 
+
+## Action Items
+- All members should brainstorm on the “Software Development Plan.”
+## Questions or Concerns
+### Next meeting
+- we should decide which members will work on which component.
+- We will decide how we can use Flutter for our app creation.
+
+## Signatures
+- Hana Tollossa
+- Varshitha Thanam
+- Ethan Timpe
+- JahCorian Ivery

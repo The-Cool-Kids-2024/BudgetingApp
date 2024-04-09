@@ -1,0 +1,33 @@
+# Tuesday, March 4 2024
+## Time
+- 12:00 pm - 12:20 pm
+## Attendees/Role
+- Alexander Hooper
+- Ethan Timpe
+- Hana Tollossa
+- Jahcorian Ivery
+- Varshitha Thanam
+## Decisions Made
+- We discuss our PowerPoint presentation.
+- We  discuss our final product.
+- We discuss the review of SDP to meet our final product.
+
+## Action Items
+- We should work on our MVP, due 4/8.
+- We should meet on Monday to practice our presentation.
+- The organization of the presentation is as follows:-
+  - Jahcorian Ivery -> Introduction, outline, Elevator Speech, and Income/expense page
+  - Varshitha Thanam -> Requirement and Budget page
+  - Hana Tollossa -> Architect and Home Page
+  - Ethan Timpe -> Entity Relationship Diagram, create Page, Login page, and Account Page 
+  - Alexander Hooper -> Goal page and Conclusion
+ 
+  
+  
+## Questions or Concerns
+
+## Signatures  
+- Hana Tollossa
+- Ethan Timpe
+- JahCorian Ivery
+- Varshitha Thanam

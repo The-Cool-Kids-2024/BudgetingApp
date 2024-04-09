@@ -1,0 +1,24 @@
+# Tuesday, April 2 2024
+## Time
+- 11:20 am - 11:50 am
+## Attendees/Role
+- Alexander Hooper
+- Hana Tollossa
+- Jahcorian Ivery
+- Varshitha Thanam
+## Decisions Made
+- We discuss how far everyone is in their part of the app code.
+- We discuss how our PowerPoint presentation will be organized.
+- We discuss how to integrate our code on GitHub and when it is due.
+## Action Items
+- We should meet on 4/3 to finalize our PowerPoint presentation.
+- We should review our product.
+- We should review our SDP to meet our final product.
+## Questions or Concerns
+
+## Signatures  
+- Hana Tollossa
+- Varshitha Thanam
+- Ethan Timpe
+- JahCorian Ivery
+

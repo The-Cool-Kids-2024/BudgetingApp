@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Specifications &mdash; CommonCents  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/theme.css?v=85f780b6" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Design Ideas" href="design.html" />
+    <link rel="prev" title="Software Development Plan" href="software-development-plan.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Design</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="requirement-evaluation.html">Requirement -Evaluation plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software-development-plan.html">Software Development Plan</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Design Specifications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">INTRODUCTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-overview">SYSTEM OVERVIEW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-architecture">SYSTEM ARCHITECTURE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-design">DATA DESIGN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interface-design">INTERFACE DESIGN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design Ideas</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CommonCents</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Design Specifications</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/design-specs.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="design-specifications">
+<h1>Design Specifications<a class="headerlink" href="#design-specifications" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>INTRODUCTION<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This software design document describes the architecture and system design of CommonCents - a mobile budgeting app to help users manage their finances.</p>
+</section>
+<section id="system-overview">
+<h2>SYSTEM OVERVIEW<a class="headerlink" href="#system-overview" title="Link to this heading"></a></h2>
+<p>Give a general description of the functionality, context and design of your project. Provide any background information if necessary.</p>
+<section id="requirements">
+<h3>REQUIREMENTS<a class="headerlink" href="#requirements" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p>Req No.</p></th>
+<th class="head"><p>Requirement</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>1.0</p></td>
+<td><p>The app shall allow users to track their monthly expenses through user input.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>2.0</p></td>
+<td><p>The app shall allow users to log in with a username and password pair.</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>2.1</p></td>
+<td><p>The app shall store and retrieve historical expense data for multiple users.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>3.0</p></td>
+<td><p>The app shall allow users to plan large purchases by calculating monthly savings based on the total price and desired goal date.</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>3.1</p></td>
+<td><p>The app shall allow users to plan large purchases by calculating a goal date based on total price and desired monthly savings.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>4.0</p></td>
+<td><p>The app shall be supported on iOS devices.</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>4.1</p></td>
+<td><p>The app shall be supported on Android devices.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="system-architecture">
+<h2>SYSTEM ARCHITECTURE<a class="headerlink" href="#system-architecture" title="Link to this heading"></a></h2>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart TD;
+    A[Login Page] --&quot;Create Account&quot; button --&gt; B[Create Account]
+    A -- &quot;Login&quot; button w/ valid credentials --&gt; C[Home Page]
+    A -- &quot;Login&quot; button w/ invalid credentials --&gt; A
+    B --&gt; C
+    C -- &quot;Home&quot; button --&gt; D[Home]
+    C -- &quot;Add Goal&quot; button --&gt; H[Add Goal Page]
+    H --&gt; C
+    C -- &quot;Add Income/Expense&quot; button --&gt; I[Add Income/Expense Page]
+    I --&gt; C
+    C -- &quot;Budget&quot; button --&gt; E[Budget Page]
+    C -- &quot;Goals&quot; button --&gt; F[Goals Page]
+    C -- &quot;Account&quot; button --&gt; G[Account Page]
+</pre></div>
+</div>
+<p><img alt="image" src="_images/erd.PNG" /></p>
+<section id="login-page">
+<h3>Login Page<a class="headerlink" href="#login-page" title="Link to this heading"></a></h3>
+<p>The Login Page is the first page displayed to the user upon opening the app. It allows users to either enter their login credentials or create an account.</p>
+</section>
+<section id="home-page">
+<h3>Home Page<a class="headerlink" href="#home-page" title="Link to this heading"></a></h3>
+<p>The Home Page is the page the user sees upon logging in. It allows users to see their summaries and navigate to the other pages.</p>
+</section>
+<section id="income-expense-page">
+<h3>Income/Expense Page<a class="headerlink" href="#income-expense-page" title="Link to this heading"></a></h3>
+<p>The Income and Expenses page will show a user an overview of all records transactions for the account.</p>
+</section>
+<section id="budget-page">
+<h3>Budget Page<a class="headerlink" href="#budget-page" title="Link to this heading"></a></h3>
+<p>This page will allow the user to view their buget statements either mothly or yearly.</p>
+</section>
+<section id="goals-page">
+<h3>Goals Page<a class="headerlink" href="#goals-page" title="Link to this heading"></a></h3>
+<p>This page will allow the user to see any future large purchases they plan to make and see their contributions towards that goal.</p>
+</section>
+<section id="account-page">
+<h3>Account Page<a class="headerlink" href="#account-page" title="Link to this heading"></a></h3>
+<p>The account page displays the user’s first name, last name, username, and email. From this page, users can choose to change these fields or log out.</p>
+</section>
+</section>
+<section id="data-design">
+<h2>DATA DESIGN<a class="headerlink" href="#data-design" title="Link to this heading"></a></h2>
+<section id="data-description">
+<h3>Data Description<a class="headerlink" href="#data-description" title="Link to this heading"></a></h3>
+<p>Explain how the information domain of your system is transformed into data structures. Describe how the major data or system entities are stored, processed, and organized. List any databases or data storage items.</p>
+</section>
+</section>
+<section id="interface-design">
+<h2>INTERFACE DESIGN<a class="headerlink" href="#interface-design" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Login Page<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>“Username” text field</p></li>
+<li><p>“Password” text field</p></li>
+<li><p>“Login” button</p></li>
+<li><p>“Create Account” button</p></li>
+</ul>
+</section>
+<section id="create-account-page">
+<h3>Create Account Page<a class="headerlink" href="#create-account-page" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>“First Name” text field</p></li>
+<li><p>“Last Name” text field</p></li>
+<li><p>“Email” text field</p></li>
+<li><p>“Username” text field</p></li>
+<li><p>“Password” text field</p></li>
+<li><p>“Confirm Password” text field</p></li>
+<li><p>“Create Account” button</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Home Page<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>“Home Icon” button</p></li>
+<li><p>“Goal Icon” button</p></li>
+<li><p>“Metrics Icon” button ( includes Income and expense)</p></li>
+<li><p>“Login Icon” button</p></li>
+<li><p>“Add Icon” button</p></li>
+<li><p>“Budget Icon” button</p></li>
+<li><p>“Goal summary” text output based on the “Goal Page” data.</p></li>
+<li><p>“Income/expense summary” text output based on the “Metrics Page” data.</p></li>
+<li><p>“Budget Summary” text output based on the “Budget Page” data.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Income/Expense Page<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+</section>
+<section id="id4">
+<h3>Budget Page<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>“Budget” Icon</p></li>
+<li><p>“Budget Indicator” Icon</p></li>
+<li><p>“Mothly Statement” button</p></li>
+<li><p>“Yearly Statement” button</p></li>
+<li><p>Monthly Statement button opens up to the expense page on that month</p></li>
+<li><p>Yearly Statement button opens up to the expense page on that year</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Goals Page<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>“Goal Amount” number field</p></li>
+<li><p>“Goal date” date field</p></li>
+<li><p>“Goal monthly” number field (appears based on “Switch to monthly goal”)</p></li>
+<li><p>“Switch to monthly goal” button</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>Account Page<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>“First Name” text field</p></li>
+<li><p>“Last Name” text field</p></li>
+<li><p>“Email” text field</p></li>
+<li><p>“Username” text field</p></li>
+<li><p>“Save Changes” button</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="software-development-plan.html" class="btn btn-neutral float-left" title="Software Development Plan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="design.html" class="btn btn-neutral float-right" title="Design Ideas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

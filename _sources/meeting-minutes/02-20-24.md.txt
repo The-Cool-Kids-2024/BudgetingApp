@@ -1,0 +1,38 @@
+# Tuesday, February 20, 2024  
+
+## Time  
+
+- 11:55 am - 12:20 pm  
+
+## Attendees/Role  
+
+- Ethan Timpe  
+- Alexander Hooper 
+- Hana Tollossa  
+- Jahcorian Ivery
+- Varshitha Thanam  
+
+## Decisions Made   
+
+- We discuss our design plan.
+
+## Action Items  
+
+- We should keep working on coding each feature of our app.
+- We should keep working on our design plan. 
+
+## Questions or Concerns  
+
+
+### Next meeting  
+
+- We will be presenting Sketches of each page.
+
+ 
+
+## Signatures  
+
+- Hana Tollossa
+- Ethan Timpe
+- JahCorian Ivery
+

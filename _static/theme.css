@@ -1,0 +1,24 @@
+.wy-nav-content {
+    max-width: 1600px !important;
+}
+
+h1 {
+    text-decoration: underline;
+    font-size: 175%;
+}
+
+.wy-side-nav-search {
+    background-color: #22CB43;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+    color: #22CB43;
+}
+
+.wy-nav-top {
+    background: #22CB43;
+}
+
+.wy-nav-side {
+    background: #212421;
+}
